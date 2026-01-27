@@ -29,3 +29,4 @@ This project shall be executive by 1st comiling the make file.
 # Resources
 
 - Understanding stack
+- Understanding sort tchniques
