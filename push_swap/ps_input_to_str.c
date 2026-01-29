@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_check_integer.c                                 :+:      :+:    :+:   */
+/*   ps_input_to_str.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/01/29 17:44:22 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/01/29 14:56:04 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/01/29 15:21:20 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//Function that takes #s if arguments and joins them with a delimeter
+
 #include "push_swap.h"
 
-int ps_check_integer(char **str)
+char	*ps_input_to_str(char **argv)
 {
-	int		i;
-	int		j;
+	char	*str;
+	size_t	i;
 
-	i = 0;
-	while (str[i] != NULL)
+	i = 2;
+	str = argv[1];
+	while (argv[i] != NULL)
 	{
-		j = 0;
-		while((str[i][j]) != '\0')
-		{
-			if (!ft_strchr("+-012345678910", str[i][j]))
-				return 0;
-			j++;
-		}
+		str = ft_strjoin_delimeter(str,argv[i],' ');
 		i++;
-	}		
-	return 1;
+	}
+	return (str);
 }

@@ -6,7 +6,7 @@
 #    By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 11:00:37 by mvelasqu          #+#    #+#              #
-#    Updated: 2026/01/27 15:43:11 by mvelasqu         ###   ########.fr        #
+#    Updated: 2026/01/29 15:07:33 by mvelasqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ SRCS_LIB = libft_src/ft_atoi.c \
 		libft_src/ft_strdup.c \
 		libft_src/ft_striteri.c \
 		libft_src/ft_strjoin.c \
+		libft_src/ft_strjoin_delimeter.c \
 		libft_src/ft_strlcat.c \
 		libft_src/ft_strlcpy.c \
 		libft_src/ft_strlen.c \
@@ -85,7 +86,8 @@ SRCS_PS = push_swap/ps_check_ascending.c \
 		push_swap/ps_index_of_min_reverse.c \
 		push_swap/ps_index_of_min_rotate.c \
 		push_swap/ps_indext_of_min.c \
-		push_swap/ps_print_list.c
+		push_swap/ps_print_list.c \
+		push_swap/ps_input_to_str.c
 OBJS_LIB = $(SRCS_LIB:.c=.o)
 OBJS_PS = $(SRCS_PS:.c=.o)
 OBJS_MAIN = $(MAIN:.c=.o)

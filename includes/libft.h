@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:51:21 by mvelasqu          #+#    #+#             */
-/*   Updated: 2025/12/22 11:03:52 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/01/29 15:07:01 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include <stdint.h>
+# include "ft_printf.h"
 
 typedef struct s_list
 {
@@ -50,6 +51,7 @@ char	*ft_itoa(int n);
 char	*ft_strdup(const char *s);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin_delimeter(char const *s1, char const *s2, char d);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char	const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
