@@ -39,7 +39,7 @@ void	ps_free_lst(ps_list **lst);
 int		ps_index_of_min_rev(ps_list *lst);
 int		ps_index_of_min_rot(ps_list *lst);
 int		ps_index_of_min(ps_list *lst);
-void	ps_print_lst(ps_list *lst);
+void	ps_print_lst(ps_list **lst);
 char	*ps_input_to_str(char **argv);
 int		main(int argc, char **argv);
 

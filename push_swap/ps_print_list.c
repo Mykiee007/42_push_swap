@@ -12,20 +12,20 @@
 
 #include "push_swap.h"
 
-void ps_print_lst(ps_list *lst)
+void ps_print_lst(ps_list **lst)
 {
 	ps_list *list;
-
-	if (!lst)
+	ft_printf("inside print lst\n");
+	if (!lst && !*lst)
 	{
 		ft_printf("empty list\n");
 		return;
 	}
-	list = lst;
-	while (list -> next != lst)
+	list = *lst;
+	while (list -> next != *lst)
 	{
 		ft_printf("%d", list -> content);
-		if (list -> next != lst)
+		if (list -> next != *lst)
 			ft_printf(" ");
 		list = list -> next;
 	}
