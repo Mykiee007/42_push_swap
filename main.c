@@ -27,23 +27,26 @@ static void free_split(char **s)
 	free(s);
 }
 
-void	process_input(char **input_list, ps_list **lst)
+void	str_to_lst(char **input_list, ps_list **lst)
 {
 	int	i;
-	size_t	number;
+	int	number;
 	ps_list *node;
+
+	// separate the function
+	// validate the input_list properly. handle invalid
+	// clean up if in case failed in the middle of the transfering
+	// handle when pointer is null?
+	// check if we really want an integer or a string of numbers. 
 
 	i = 0;
 	while (input_list[i] != NULL)
 	{
-		ft_printf("hello %s\n", input_list[i]);
-		number = ft_atoi(input_list[i]);
-
-		ft_printf("the number %d\n", number);
+		number = ft_atoi(input_list[i]);  
 		node = ps_doublelst_new(number);
-		ft_printf("the node: %d\n", node -> content);
-		ps_doublelst_add_front(lst,node);
-		ft_printf("the node in the list: %d\n", (*lst) -> content);
+		if (!node)
+			return;
+		ps_doublelst_add_back(lst,node);
 		i++;
 	}
 }
@@ -54,44 +57,23 @@ int main(int argc, char **argv)
 	ps_list *head;
 	char	**split;
 	char	*str1;
-	char	d;
-	int 	i;
 
 	head = NULL;
 	lst_a = &head;
-	d = ' ';
 	if (argc == 1)
 	{
 		ft_printf("input a valid argument");
 		return (0);
 	}
 	str1 = ps_input_to_str(argv);
-	ft_printf("combined argv:%s\n", str1);
-	split = ft_split(str1, d);
-	if (!split)
-		return 0;
-	i = 0;
-	while (split[i] != NULL)
-	{
-		ft_printf("split:%s\n", split[i]);
-		i++;
-	}
-	ft_printf("after split\n");
+	split = ft_split(str1, ' ');
 	if (!ps_check_integer(split))
 	{
-		ft_printf("input an integer");
+		ft_printf("input an integer\n");
 		return 0;
 	}
-	ft_printf("after ps_check_integer\n");	
-	process_input(split,lst_a);
-	ft_printf("after process_input\n");
-	if (lst_a && *lst_a)
-		ft_printf("print the head node %d\n", (*lst_a) -> content);
-	ft_printf("skips the print");
-	//process_input(argv, &lst_a);
-	ft_printf("here 4\n");
+	str_to_lst(split,lst_a);
 	ps_print_lst(lst_a);
-	ft_printf("here 5\n");
 	ft_printf("distance from head to min content: %d\n", ps_index_of_min(*lst_a));
 	if (ps_check_ascend(*lst_a))
 		ft_printf("Ascending: Yes\n");
@@ -103,6 +85,5 @@ int main(int argc, char **argv)
 		ft_printf("repeat: Yes\n");
 	free(str1);
 	free_split(split);
-	ps_free_lst(lst_a);
 	return 0;
 }

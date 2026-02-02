@@ -15,10 +15,7 @@
 void	ps_doublelst_add_front(ps_list **lst, ps_list *new)
 {
 	ps_list *tail;
-	
-	ft_printf("enters doublelst addfront\n");
-	ft_printf("the node in doublelst: %d\n", new -> content);
-	ft_printf("the head in the lst: %p\n", *lst);
+
 	if (!new)
 		return;
 	if (*lst == NULL)
@@ -33,5 +30,4 @@ void	ps_doublelst_add_front(ps_list **lst, ps_list *new)
 	new -> prev = tail;
 	new -> next = *lst;
 	(*lst) -> prev = new;
-	ft_printf("content in doublst addfront: %d\n", new -> content);
 }

@@ -12,36 +12,19 @@
 
 #include "libft.h"
 
-static int	ft_cpystr(char *dest, const char *src, int k)
-{
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[k] = src[i];
-		i++;
-		k++;
-	}
-	return (k);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		k;
-	int		str_len;
 	char	*d;
+	size_t	len;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	str_len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	d = (char *)malloc(str_len * sizeof(char));
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	d = (char *)malloc(len * sizeof(char));
 	if (d == NULL)
 		return (NULL);
-	k = 0;
-	k = ft_cpystr(d, s1, k);
-	k = ft_cpystr(d, s2, k);
-	d[k] = '\0';
+	ft_strlcpy(d, s1, len);
+	ft_strlcat(d, s2, len);
 	return (d);
 }
 

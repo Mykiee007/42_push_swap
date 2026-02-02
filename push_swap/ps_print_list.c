@@ -15,7 +15,6 @@
 void ps_print_lst(ps_list **lst)
 {
 	ps_list *list;
-	ft_printf("inside print lst\n");
 	if (!lst && !*lst)
 	{
 		ft_printf("empty list\n");

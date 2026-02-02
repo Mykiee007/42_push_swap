@@ -12,39 +12,46 @@
 
 #include "libft.h"
 
-static int	ft_memcpy_count(char *dest, char const *src, int c)
+static void	ft_memcpy_count(char *dest, char const *src, size_t *c)
 {
-	int i;
+	size_t i;
 
 	i = 0;
+	
 	while (src[i] != '\0')
 	{
-		dest[c] = src[i];
+		dest[*c] = src[i];
 		i++;
-		c++;
+		(*c)++;
 	}
-	return (c);
 }
 
 char	*ft_strjoin_delimeter(char const *s1, char const *s2, char d)
 {
-	char	*str;
-	size_t	len1;
-	size_t	len2;
-	int		i;
+	char	*tmp;
+	size_t	*i;
+	size_t	c;
+	size_t	total;
 
-	if(!s1 || !s2 || !d)
+	c = 0;
+	i = &c;
+	if(!s2)
 		return NULL;
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2) + 1;
-	str = (char *)malloc ((len1 + len2 + 1)*sizeof(char));
-	if (!str)
+	if (!s1)
+		total = ft_strlen(s2) + 1;
+	else
+		total = ft_strlen(s1) + ft_strlen(s2) + 2;
+	tmp = (char *)malloc (total * sizeof(char));
+	if (!tmp)
 		return NULL;
-	i = 0;
-	i = ft_memcpy_count(str, s1, i);
-	str[i] = d;
-	i = i + 1;
-	i = ft_memcpy_count(str, s2, i);
-	str[i] = '\0';
-	return (str);
+	if (s1 != NULL)
+	{
+		ft_memcpy_count(tmp, s1, i);
+		tmp[c] = d;
+		c = c + 1;
+	}
+	ft_memcpy_count(tmp, s2, i);
+	tmp[c] = '\0';
+	ft_printf("in delimeter: %s\n", tmp);
+	return (tmp);
 }
