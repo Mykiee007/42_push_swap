@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 10:31:25 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/03 12:02:42 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/03 15:09:21 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	ft_str_to_lst(char **split, ps_list **lst)
 {
 	int	i;
-	int	number;
+	long long int	number;
 	ps_list *node;
 
-	// separate the function
+	// separate the function - done
 	// validate the input_list properly. handle invalid
 	// clean up if in case failed in the middle of the transfering
 	// handle when pointer is null?

@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/03 12:10:03 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/03 13:49:38 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,16 @@ int ps_check_integer(char **str)
 		j = 0;
 		if (str[i][j] == '+' || str[i][j] == '-')
 			j++;
+		if (str[i][j] == '0')
+			return 0;
 		while((str[i][j]) != '\0')
 		{
 			if (!ft_isdigit(str[i][j]))
 				return 0;
 			j++;
 		}
+		if (!ps_check_integer_limits(str[i]))
+			return 0;
 		i++;
 	}		
 	return 1;

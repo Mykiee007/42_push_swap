@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 16:10:09 by mvelasqu          #+#    #+#             */
-/*   Updated: 2025/12/22 10:36:35 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/03 15:14:39 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(char const *c)
 {
 	int	i;
 	int	sign;
-	int	result;
+	long long int	result;
 
 	i = 0;
 	sign = 1;
