@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:51:21 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/01/29 15:07:01 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/03 12:06:42 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void	ft_free_split(char **split);
 void	ft_bzero(void *src, size_t n);
 void	*ft_calloc(size_t count, size_t n);
 void	*ft_memchr(const void *src, int c, size_t n);

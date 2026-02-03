@@ -6,7 +6,7 @@
 #    By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 11:00:37 by mvelasqu          #+#    #+#              #
-#    Updated: 2026/01/29 15:07:33 by mvelasqu         ###   ########.fr        #
+#    Updated: 2026/02/03 12:06:50 by mvelasqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,8 @@ SRCS_LIB = libft_src/ft_atoi.c \
 		libft_src/ft_lstclear_bonus.c \
 		libft_src/ft_lstiter_bonus.c \
 		libft_src/ft_lstmap_bonus.c \
+		libft_src/ft_str_to_lst.c \
+		libft_src/ft_free_split.c \
 		ft_printf/ft_printf.c \
 		ft_printf/ft_printf_utils1.c \
 		ft_printf/ft_printf_utils2.c
