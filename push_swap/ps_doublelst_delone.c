@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_to_lst.c                                    :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/03 10:31:25 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/03 15:09:21 by mvelasqu         ###   ########.fr       */
+/*   Created: 2025/12/01 14:07:33 by mvelasqu          #+#    #+#             */
+/*   Updated: 2025/12/02 10:04:10 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_str_to_lst(char **split, ps_list **lst)
+void ps_doubelst_delone(ps_list **lst)
 {
-	int	i;
-	long long int	number;
-	ps_list *node;
+    ps_list     *list;
 
-	//make a ps_delete_node
-	//make a ps_delete_all_node
-
-	i = 0;
-	while (split[i] != NULL)
-	{
-		number = ft_atoi(split[i]);  
-		node = ps_doublelst_new(number);
-		if (!node)
-			return;
-		ps_doublelst_add_back(lst,node);
-		i++;
-	}
+    if (*lst == NULL)
+        return;
+    list = *lst;
+    if (list -> next == *lst && list -> previous == *lst)
+    {
+        free (*lst);
+        *lst = NULL;
+        return;
+    }
+    list -> next -> previous = list -> previous;
+    list -> previous -> next = list -> next;
+    *lst = list -> next;
+    free (list);
+    return;
 }

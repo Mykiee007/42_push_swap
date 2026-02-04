@@ -11,18 +11,33 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
-int	ps_check_integer_limits(char *string)
+int	ps_check_integer_limits(char *str)
 {
-	long long int		*ptr;
+	long long int	tmp;
+	int				i;
+	int				sign;
 
-	ptr = ft_strtoi(string);
-	if (!ptr)
+	i = 0;
+	sign = 1;
+	while (str[i] == ' ' || (str[i] > 8 && str[i] < 14))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		free (ptr);
-		return 0;
+		if (str[i] == '-')
+			sign = -1;
+		i++;
 	}
-	free (ptr);
+	tmp = 0;
+	while(str[i] >= '0' && str[i] <= '9')
+	{
+		tmp = (tmp * 10) + (str[i] - '0');
+		tmp = tmp * sign;
+		if (INT_MIN > tmp || tmp > INT_MAX)
+			return 0;
+		i++;
+	}
+	if (str[i] != '\0')
+		return 0;
 	return 1;
 }
