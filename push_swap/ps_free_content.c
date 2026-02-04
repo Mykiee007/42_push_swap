@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_doublelst_clear.c                               :+:      :+:    :+:   */
+/*   ps_free_content.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/01 14:07:33 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/04 16:25:31 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/02/04 15:16:41 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/02/04 15:59:13 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ps_doublelst_clear(ps_list **lst)
+void	ps_free_content(void *content)
 {
-	if (!lst || !(*lst))
-        return;
-    while ((*lst) != NULL)
-		ps_doublelst_delhead(lst);
+	free(content);
 }
-
-// i check first if list and head pointer is not null
-// delete all until *lst (head pointer is NULL)

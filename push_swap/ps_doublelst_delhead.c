@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_doublelst_delone.c                              :+:      :+:    :+:   */
+/*   ps_doublelst_delhead.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 14:07:33 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/04 12:33:57 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/04 16:15:12 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void *ps_free_content(void *content)
-{
-	free(content);
-}
-
-void ps_doubelst_delhead(ps_list **lst, void (*del)(void))
+void	ps_doublelst_delhead(ps_list **lst)
 {
 	ps_list		*cur;
 	ps_list		*prev_l;
 	
-	if(!lst || !*lst || !del)
+	if(!lst || !*lst)
 		return; 
 	cur = *lst;
 	prev_l = NULL;
 	if (cur -> next == *lst && cur -> prev == *lst)
 	{
-		del(cur -> content);
-		*lst = NULL;
 		free (cur);
+		*lst = NULL;
 		return;
 	}
 	prev_l = (*lst) -> prev;
 	*lst = (*lst) -> next;
 	prev_l -> next = (*lst);
 	(*lst) -> prev = prev_l;
-	del(cur -> content);
 	free(cur);
     return;
 }

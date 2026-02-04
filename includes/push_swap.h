@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:12:29 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/04 11:19:17 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/04 15:55:14 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 typedef struct l_list
 {
-	long long int 			content;
+	int 			content;
 	struct l_list	*next;
 	struct l_list	*prev;
 }	ps_list;
@@ -44,6 +44,9 @@ int		ps_index_of_min(ps_list *lst);
 void	ps_print_lst(ps_list **lst);
 void	ft_str_to_lst(char **input_list, ps_list **lst);
 char	*ps_input_to_str(char **argv);
+void	ps_doublelst_delhead(ps_list **lst);
+void	ps_doublelst_clear(ps_list **lst);
+void	ps_free_content(void *content);
 int		main(int argc, char **argv);
 
 #endif

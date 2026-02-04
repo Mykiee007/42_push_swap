@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:10:45 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/04 11:31:18 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/04 16:28:53 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int main(int argc, char **argv)
 	else
 		ft_printf("repeat: Yes\n");
 	
-
-	
+	ps_doublelst_clear(lst_a);
 	return 0;
 }
