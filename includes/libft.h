@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:51:21 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/03 15:49:28 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:22:14 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,11 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s, const char *n, size_t size);
-long long int	*ft_strtoi(char *str);
 int		ft_atoi(char const *c);
 char	*ft_itoa(int n);
 char	*ft_strdup(const char *s);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strjoin_delimeter(char const *s1, char const *s2, char d);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char	const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));

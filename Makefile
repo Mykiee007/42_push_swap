@@ -6,7 +6,7 @@
 #    By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 11:00:37 by mvelasqu          #+#    #+#              #
-#    Updated: 2026/02/03 15:18:41 by mvelasqu         ###   ########.fr        #
+#    Updated: 2026/02/04 11:22:04 by mvelasqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,6 @@ SRCS_LIB = libft_src/ft_atoi.c \
 		libft_src/ft_strdup.c \
 		libft_src/ft_striteri.c \
 		libft_src/ft_strjoin.c \
-		libft_src/ft_strjoin_delimeter.c \
 		libft_src/ft_strlcat.c \
 		libft_src/ft_strlcpy.c \
 		libft_src/ft_strlen.c \
@@ -73,7 +72,6 @@ SRCS_LIB = libft_src/ft_atoi.c \
 		libft_src/ft_lstiter_bonus.c \
 		libft_src/ft_lstmap_bonus.c \
 		libft_src/ft_free_split.c \
-		libft_src/ft_strtoi.c\
 		ft_printf/ft_printf.c \
 		ft_printf/ft_printf_utils1.c \
 		ft_printf/ft_printf_utils2.c

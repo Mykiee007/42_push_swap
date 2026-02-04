@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/03 13:49:38 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:22:56 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int ps_check_integer(char **str)
 	i = 0;
 	while (str[i] != NULL)
 	{
-		ft_printf("in checker%d\n", ps_check_integer_limits(str[i]));
 		if (!ps_check_integer_limits(str[i]))
 			return 0;
 		i++;

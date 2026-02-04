@@ -1,33 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ps_doublelst_delone.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 14:07:33 by mvelasqu          #+#    #+#             */
-/*   Updated: 2025/12/02 10:04:10 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/04 12:33:57 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ps_doubelst_delone(ps_list **lst)
+static void *ps_free_content(void *content)
 {
-    ps_list     *list;
+	free(content);
+}
 
-    if (*lst == NULL)
-        return;
-    list = *lst;
-    if (list -> next == *lst && list -> previous == *lst)
-    {
-        free (*lst);
-        *lst = NULL;
-        return;
-    }
-    list -> next -> previous = list -> previous;
-    list -> previous -> next = list -> next;
-    *lst = list -> next;
-    free (list);
+void ps_doubelst_delhead(ps_list **lst, void (*del)(void))
+{
+	ps_list		*cur;
+	ps_list		*prev_l;
+	
+	if(!lst || !*lst || !del)
+		return; 
+	cur = *lst;
+	prev_l = NULL;
+	if (cur -> next == *lst && cur -> prev == *lst)
+	{
+		del(cur -> content);
+		*lst = NULL;
+		free (cur);
+		return;
+	}
+	prev_l = (*lst) -> prev;
+	*lst = (*lst) -> next;
+	prev_l -> next = (*lst);
+	(*lst) -> prev = prev_l;
+	del(cur -> content);
+	free(cur);
     return;
 }
+
+// this delone moves the head to the next and delete the current head of the linked list. 
+	// 1. check if list is empty or del function is missing
+	// 2. different way if node is only one and node is many
+		// 2.a only one node inside, check if its the only node in the list
+		// 2.b the list is many
+	// check if i am at the head
+	// start connecting pointers last (prev_l) and next (cur -> next)
+	// get pointer of last node
+	// move head pointer to next node.
+	// update last pointer's next
+	// update new headd pointer's prev;

@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:12:29 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/03 15:48:54 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:19:17 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct l_list
 
 
 int		ps_check_ascend(ps_list *lst);
+int		ps_check_integer_limits(char *str);
 int		ps_check_integer(char **str);
 int		ps_check_min(ps_list *lst);
 int		ps_check_repeat (ps_list *lst);
@@ -43,7 +44,6 @@ int		ps_index_of_min(ps_list *lst);
 void	ps_print_lst(ps_list **lst);
 void	ft_str_to_lst(char **input_list, ps_list **lst);
 char	*ps_input_to_str(char **argv);
-int		ps_check_integer_limits(char *string);
 int		main(int argc, char **argv);
 
 #endif
