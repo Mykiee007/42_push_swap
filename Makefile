@@ -79,8 +79,8 @@ SRCS_PS = push_swap/ps_check_ascending.c \
 		push_swap/ps_check_integer.c \
 		push_swap/ps_check_min.c \
 		push_swap/ps_check_repeat.c \
-		push_swap/ps_doubelst_add_back.c \
-		push_swap/ps_doubelst_new.c \
+		push_swap/ps_doublelst_add_back.c \
+		push_swap/ps_doublelst_new.c \
 		push_swap/ps_doublelst_add_front.c \
 		push_swap/ps_free_lst.c \
 		push_swap/ps_index_of_min_reverse.c \
@@ -92,7 +92,11 @@ SRCS_PS = push_swap/ps_check_ascending.c \
 		push_swap/ps_check_integer_limits.c \
 		push_swap/ps_doublelst_clear.c \
 		push_swap/ps_doublelst_delhead.c \
-		push_swap/ps_free_content.c
+		push_swap/ps_free_content.c \
+		push_swap/ps_swap_sa.c \
+		push_swap/ps_swap_sb.c \
+		push_swap/ps_push_pa.c \
+		push_swap/ps_push_pb.c
 OBJS_LIB = $(SRCS_LIB:.c=.o)
 OBJS_PS = $(SRCS_PS:.c=.o)
 OBJS_MAIN = $(MAIN:.c=.o)
