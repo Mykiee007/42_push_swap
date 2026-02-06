@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:10:45 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 13:32:55 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/06 15:37:54 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 	
 int main(int argc, char **argv)
 {
-	ps_list *lst_a = NULL;
-	ps_list *lst_b = NULL;
+	t_ps_list *lst_a = NULL;
+	t_ps_list *lst_b = NULL;
 	char	**split;
 	char	*str1;
 

@@ -6,7 +6,7 @@
 #    By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 11:00:37 by mvelasqu          #+#    #+#              #
-#    Updated: 2026/02/06 13:28:21 by mvelasqu         ###   ########.fr        #
+#    Updated: 2026/02/06 14:29:37 by mvelasqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ SRCS_PS = push_swap/ps_check_ascending.c \
 		push_swap/ps_free_lst.c \
 		push_swap/ps_index_of_min_reverse.c \
 		push_swap/ps_index_of_min_rotate.c \
-		push_swap/ps_indext_of_min.c \
+		push_swap/ps_index_of_min.c \
 		push_swap/ps_print_list.c \
 		push_swap/ps_input_to_str.c \
 		push_swap/ft_str_to_lst.c \

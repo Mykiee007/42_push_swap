@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_doubelst_add_back.c                             :+:      :+:    :+:   */
+/*   ps_doublelst_add_back.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:11:01 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/01/27 14:59:09 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/06 15:32:31 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_doublelst_add_back(ps_list **lst, ps_list *new)
+void	ps_doublelst_add_back(t_ps_list **lst, t_ps_list *new)
 {
-	ps_list *tail;
-	
+	t_ps_list	*tail;
+
 	if (!lst || !new)
-		return;
+		return ;
 	if (*lst == NULL)
 	{
 		new -> next = new;
 		new -> prev = new;
 		*lst = new;
-		return;
+		return ;
 	}
-	tail = (*lst) -> prev;
+	tail = (*lst)-> prev;
 	new -> next = *lst;
 	new -> prev = tail;
 	tail -> next = new;
-	(*lst) -> prev = new;
+	(*lst)-> prev = new;
 }

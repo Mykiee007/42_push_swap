@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:12:29 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 14:06:24 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/06 15:35:31 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,43 +21,42 @@
 # include <stdint.h>
 # include <fcntl.h>
 
-typedef struct l_list
+typedef struct s_ps_list
 {
-	int 			content;
-	struct l_list	*next;
-	struct l_list	*prev;
-}	ps_list;
+	int					content;
+	struct s_ps_list	*next;
+	struct s_ps_list	*prev;
+}	t_ps_list;
 
-
-int		ps_check_ascend(ps_list *lst);
-int		ps_check_integer_limits(char *str);
-int		ps_check_integer(char **str);
-int		ps_check_min(ps_list *lst);
-int		ps_check_repeat (ps_list *lst);
-void	ps_doublelst_add_back(ps_list **lst, ps_list *new);
-void	ps_doublelst_add_front(ps_list **lst, ps_list *new);
-ps_list	*ps_doublelst_new(int content);
-void	ps_free_lst(ps_list **lst);
-int		ps_index_of_min_rev(ps_list *lst);
-int		ps_index_of_min_rot(ps_list *lst);
-int		ps_index_of_min(ps_list *lst);
-void	ps_print_lst(ps_list **lst);
-void	ft_str_to_lst(char **input_list, ps_list **lst);
-char	*ps_input_to_str(char **argv);
-void	ps_doublelst_delhead(ps_list **lst);
-void	ps_doublelst_clear(ps_list **lst);
-void	ps_free_content(void *content);
-void    ps_swap_sa(ps_list **lst_a);
-void    ps_swap_sb(ps_list **lst_b);
-void    ps_push_pa(ps_list **lst_a, ps_list **lst_b);
-void    ps_push_pb(ps_list **lst_b, ps_list **lst_a);
-void    ps_rotate_ra(ps_list **lst_a);
-void    ps_rotate_rb(ps_list **lst_b);
-void    ps_reverse_rra(ps_list **lst_a);
-void    ps_reverse_rrb(ps_list **lst_b);
-void	ps_sort(ps_list **lst_a, ps_list **lst_b);
-int		ps_doublelst_count(ps_list **lst);
-void	ps_sort_3digits(ps_list **lst_a);
-int		main(int argc, char **argv);
+int			ps_check_ascend(t_ps_list *lst);
+int			ps_check_integer_limits(char *str);
+int			ps_check_integer(char **str);
+int			ps_check_min(t_ps_list *lst);
+int			ps_check_repeat(t_ps_list *lst);
+void		ps_doublelst_add_back(t_ps_list **lst, t_ps_list *new);
+void		ps_doublelst_add_front(t_ps_list **lst, t_ps_list *new);
+t_ps_list	*ps_doublelst_new(int content);
+void		ps_free_lst(t_ps_list **lst);
+int			ps_index_of_min_rev(t_ps_list *lst);
+int			ps_index_of_min_rot(t_ps_list *lst);
+int			ps_index_of_min(t_ps_list *lst);
+void		ps_print_lst(t_ps_list **lst);
+void		ft_str_to_lst(char **input_list, t_ps_list **lst);
+char		*ps_input_to_str(char **argv);
+void		ps_doublelst_delhead(t_ps_list **lst);
+void		ps_doublelst_clear(t_ps_list **lst);
+void		ps_free_content(void *content);
+void		ps_swap_sa(t_ps_list **lst_a);
+void		ps_swap_sb(t_ps_list **lst_b);
+void		ps_push_pa(t_ps_list **lst_a, t_ps_list **lst_b);
+void		ps_push_pb(t_ps_list **lst_b, t_ps_list **lst_a);
+void		ps_rotate_ra(t_ps_list **lst_a);
+void		ps_rotate_rb(t_ps_list **lst_b);
+void		ps_reverse_rra(t_ps_list **lst_a);
+void		ps_reverse_rrb(t_ps_list **lst_b);
+void		ps_sort(t_ps_list **lst_a, t_ps_list **lst_b);
+int			ps_doublelst_count(t_ps_list **lst);
+void		ps_sort_3digits(t_ps_list **lst_a);
+int			main(int argc, char **argv);
 
 #endif

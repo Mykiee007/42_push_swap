@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 14:56:04 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/01/29 15:21:20 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/06 14:33:28 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,14 @@
 
 #include "push_swap.h"
 
-/*char	*ps_input_to_str(char **argv)
-{
-	char	*str;
-	size_t	i;
-
-	str = "";
-	i = 1;
-	while (argv[i] != NULL)
-	{
-		str = ft_strjoin_delimeter(str,argv[i],' ');
-		if (!str)
-		{
-			free (str);
-			return NULL;
-		}
-		i++;
-	}
-	return (str);
-}*/
-
 char	*ps_input_to_str(char **argv)
 {
 	size_t	i;
 	char	*result;
-	char	*tmp; // make a temporary location so you can free later
-
+	char	*tmp;
 
 	if (!argv || !*argv)
-		return NULL;
+		return (NULL);
 	result = ft_strdup("");
 	i = 1;
 	while (argv[i] != NULL)
@@ -52,9 +31,9 @@ char	*ps_input_to_str(char **argv)
 		result = tmp;
 		if (argv[i + 1] != NULL)
 		{
-				tmp = ft_strjoin(result," ");
-				free (result);
-				result = tmp;
+			tmp = ft_strjoin(result, " ");
+			free (result);
+			result = tmp;
 		}
 		i++;
 	}

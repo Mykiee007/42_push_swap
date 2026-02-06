@@ -6,28 +6,28 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:11:51 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/01/27 14:59:23 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/06 15:34:04 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_doublelst_add_front(ps_list **lst, ps_list *new)
+void	ps_doublelst_add_front(t_ps_list **lst, t_ps_list *new)
 {
-	ps_list *head;
-	ps_list	*tail;
+	t_ps_list	*head;
+	t_ps_list	*tail;
 
 	if (!new)
-		return;
+		return ;
 	if (*lst == NULL)
 	{
 		new -> next = new;
 		new -> prev = new;
 		*lst = new;
-		return;
+		return ;
 	}
 	head = (*lst);
-	tail = (*lst) -> prev;
+	tail = (*lst)-> prev;
 	new -> next = head;
 	new -> prev = tail;
 	tail -> next = new;

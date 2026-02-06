@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 12:12:11 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/04 11:19:03 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/06 14:48:25 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,14 @@ int	ps_check_integer_limits(char *str)
 		i++;
 	}
 	tmp = 0;
-	while(str[i] >= '0' && str[i] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
 		tmp = (tmp * 10) + (str[i] - '0');
-		tmp = tmp * sign;
-		if (INT_MIN > tmp || tmp > INT_MAX)
-			return 0;
+		if (INT_MIN > (tmp * sign) || (tmp * sign) > INT_MAX)
+			return (0);
 		i++;
 	}
 	if (str[i] != '\0')
-		return 0;
-	return 1;
+		return (0);
+	return (1);
 }
