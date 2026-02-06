@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 11:22:36 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 15:32:31 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/06 15:50:40 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ps_sort_3digits(t_ps_list **lst_a)
 	int		a_b;
 	int		a_c;
 
-	if ((!lst_a || !(*lst_a)) && ps_doublelst_count(lst_a) != 3)
+	if (!lst_a || !(*lst_a))
 		return ;
 	a_a = (*lst_a)-> content;
 	a_b = (*lst_a)-> next -> content;
@@ -28,13 +28,13 @@ void	ps_sort_3digits(t_ps_list **lst_a)
 		ps_swap_sa(lst_a);
 		ps_rotate_ra(lst_a);
 	}
-	if ((a_a > a_c) & (a_c > a_b))
+	else if ((a_a > a_c) && (a_c > a_b))
 		ps_reverse_rra(lst_a);
-	if ((a_a > a_c) && (a_b > a_a))
+	else if ((a_a > a_c) && (a_b > a_a))
 		ps_rotate_ra(lst_a);
-	if ((a_a > a_b) && (a_a < a_c))
+	else if ((a_a > a_b) && (a_a < a_c))
 		ps_swap_sa(lst_a);
-	if ((a_a < a_c) && (a_b > a_c))
+	else if ((a_a < a_c) && (a_b > a_c))
 	{
 		ps_rotate_ra(lst_a);
 		ps_swap_sa(lst_a);
