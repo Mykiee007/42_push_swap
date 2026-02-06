@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:10:45 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 11:07:08 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/06 13:32:55 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int main(int argc, char **argv)
 	// test section for sorting operations
 	ps_sort(&lst_a,&lst_b);
 	// end of test section
+	ps_print_lst(&lst_a);
 	ft_printf("distance from head to min content: %d\n", ps_index_of_min(lst_a));
 	if (ps_check_ascend(lst_a))
 		ft_printf("Ascending: Yes\n");

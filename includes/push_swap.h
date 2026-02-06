@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:12:29 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 10:57:20 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/06 14:06:24 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,11 @@ void    ps_push_pa(ps_list **lst_a, ps_list **lst_b);
 void    ps_push_pb(ps_list **lst_b, ps_list **lst_a);
 void    ps_rotate_ra(ps_list **lst_a);
 void    ps_rotate_rb(ps_list **lst_b);
+void    ps_reverse_rra(ps_list **lst_a);
+void    ps_reverse_rrb(ps_list **lst_b);
 void	ps_sort(ps_list **lst_a, ps_list **lst_b);
 int		ps_doublelst_count(ps_list **lst);
+void	ps_sort_3digits(ps_list **lst_a);
 int		main(int argc, char **argv);
 
 #endif

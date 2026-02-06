@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_split.c                                    :+:      :+:    :+:   */
+/*   ps_reverse_rra.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/03 12:03:21 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 14:14:29 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/02/06 11:45:20 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/02/06 11:47:29 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_free_split(char **split)
+void    ps_reverse_rra(ps_list **lst_a)
 {
-	int	i;
-
-	if (!split)
-		return ;
-	i = 0;
-	while (split[i])
-	{
-		free(split[i]);
-		i++;
-	}
-	free(split);
+    (*lst_a) = (*lst_a) -> next;
+    ft_printf("rra\n");
 }
