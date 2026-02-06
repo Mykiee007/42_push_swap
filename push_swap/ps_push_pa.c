@@ -12,22 +12,31 @@
 
 #include "push_swap.h"
 
-void    ps_push_pa(ps_list **lst_a, ps_list **lst_b)
+void    ps_push_pa(ps_list **lst_dest, ps_list **lst_src)
 {
-    int content;
-    ps_list *node;
+    ps_list *first_src;
+    ps_list *second_src;
+    ps_list *last_src;
 
-    if (!lst_a || !(*lst_a))
+    if (!lst_src || !*lst_src)
         return;
-    content = (*lst_a) ->content;
-    node = ps_doublelst_new(content);
-    if (!node)
+    //node 1 check
+    first_src = (*lst_src);
+    if ((*lst_src) -> next == (*lst_src))
     {
-        ps_doublelst_clear(lst_a);
-        ps_doublelst_clear(lst_b);
-        return;
+        ps_doublelst_add_front(lst_dest, first_src);
+        (*lst_src) = NULL;
     }
-    ps_doublelst_add_front(lst_b, node);
-    ps_doublelst_delhead(lst_a);
+    else
+    {
+        second_src = (*lst_src) -> next;
+        last_src = (*lst_src) -> prev;
+        second_src -> prev = last_src;
+        last_src -> next = second_src;
+         (*lst_src) = second_src;
+        first_src -> next = NULL;
+        first_src -> prev = NULL;
+        ps_doublelst_add_front(lst_dest, first_src);
+    }
     ft_printf("pa\n");
 }

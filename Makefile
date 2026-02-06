@@ -96,7 +96,9 @@ SRCS_PS = push_swap/ps_check_ascending.c \
 		push_swap/ps_swap_sa.c \
 		push_swap/ps_swap_sb.c \
 		push_swap/ps_push_pa.c \
-		push_swap/ps_push_pb.c
+		push_swap/ps_push_pb.c \
+		push_swap/ps_rotate_ra.c \
+		push_swap/ps_rotate_rb.c
 OBJS_LIB = $(SRCS_LIB:.c=.o)
 OBJS_PS = $(SRCS_PS:.c=.o)
 OBJS_MAIN = $(MAIN:.c=.o)

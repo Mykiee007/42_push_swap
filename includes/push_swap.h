@@ -51,6 +51,8 @@ void    ps_swap_sa(ps_list **lst_a);
 void    ps_swap_sb(ps_list **lst_b);
 void    ps_push_pa(ps_list **lst_a, ps_list **lst_b);
 void    ps_push_pb(ps_list **lst_b, ps_list **lst_a);
+void    ps_rotate_ra(ps_list **lst_a);
+void    ps_rotate_rb(ps_list **lst_b);
 int		main(int argc, char **argv);
 
 #endif

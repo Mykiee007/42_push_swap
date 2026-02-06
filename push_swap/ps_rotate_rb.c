@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_doubelst_new.c                                  :+:      :+:    :+:   */
+/*   ps_check_integer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 10:09:19 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/01/27 14:59:17 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/02/04 11:22:56 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-ps_list	*ps_doublelst_new(int content)
+void    ps_rotate_rb(ps_list **lst_b)
 {
-	ps_list	*node = (ps_list *)malloc(sizeof(ps_list));
-	if (node == NULL)
-		return (NULL);
-	node -> content = content;
-	node -> next = NULL;
-	node -> prev = NULL;
-	return (node);
+    (*lst_b) = (*lst_b) -> prev;
+    ft_printf("rb\n");
 }
