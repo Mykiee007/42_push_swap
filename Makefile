@@ -6,7 +6,7 @@
 #    By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 11:00:37 by mvelasqu          #+#    #+#              #
-#    Updated: 2026/02/06 15:52:43 by mvelasqu         ###   ########.fr        #
+#    Updated: 2026/02/09 14:16:52 by mvelasqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,7 +103,10 @@ SRCS_PS = push_swap/ps_check_ascending.c \
 		push_swap/ps_reverse_rrb.c \
 		push_swap/ps_sort.c \
 		push_swap/ps_doublelst_count.c \
-		push_swap/ps_sort_3digits.c
+		push_swap/ps_sort_3digits.c \
+		push_swap/get_max_bits.c \
+		push_swap/ps_input_key.c \
+		push_swap/ps_print_key.c
 OBJS_LIB = $(SRCS_LIB:.c=.o)
 OBJS_PS = $(SRCS_PS:.c=.o)
 OBJS_MAIN = $(MAIN:.c=.o)

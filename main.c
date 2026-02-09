@@ -6,19 +6,22 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:10:45 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 15:39:14 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/09 15:02:06 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-	
+
+int global_count = 0;
+
 int main(int argc, char **argv)
 {
 	t_ps_list *lst_a = NULL;
 	t_ps_list *lst_b = NULL;
 	char	**split;
 	char	*str1;
+
 
 	if (argc == 1)
 	{
@@ -36,11 +39,21 @@ int main(int argc, char **argv)
 	}
 	ft_str_to_lst(split,&lst_a);
 	ft_free_split(split);
+	ps_print_key(&lst_a);
 	ps_print_lst(&lst_a);
 	// test section for sorting operations
-	ps_sort(&lst_a,&lst_b);
+	//ps_sort(&lst_a,&lst_b);
+	ft_printf("count of link list: %d \n", ps_doublelst_count(&lst_a));
+	ps_input_key(&lst_a);
+	ft_printf("this is the key:");
+	ps_print_key(&lst_a);
+	ps_sort(&lst_a, &lst_b);
 	// end of test section
+	ft_printf("After sort: ");
 	ps_print_lst(&lst_a);
+	ft_printf("this is the key:");
+	ps_print_key(&lst_a);
+	ft_printf("total moves: %d\n", global_count);
 	ft_printf("distance from head to min content: %d\n", ps_index_of_min(lst_a));
 	if (ps_check_ascend(lst_a))
 		ft_printf("Ascending: Yes\n");

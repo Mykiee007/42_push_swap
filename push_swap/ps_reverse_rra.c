@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 11:45:20 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 15:32:31 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/09 14:46:21 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ps_reverse_rra(t_ps_list **lst_a)
 {
-	(*lst_a) = (*lst_a)-> next;
+	(*lst_a) = (*lst_a)-> prev;
 	ft_printf("rra\n");
 }

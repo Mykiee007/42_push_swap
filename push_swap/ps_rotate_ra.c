@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 15:32:31 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/09 14:52:35 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ps_rotate_ra(t_ps_list **lst_a)
 {
-	(*lst_a) = (*lst_a)-> prev;
+	(*lst_a) = (*lst_a)-> next;
 	ft_printf("ra\n");
+	global_count++;
 }

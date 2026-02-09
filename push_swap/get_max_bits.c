@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_rotate_rb.c                                     :+:      :+:    :+:   */
+/*   get_max_bits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/09 15:00:32 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/02/09 12:13:07 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/02/09 12:18:37 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_rotate_rb(t_ps_list **lst_b)
+int	get_max_bits(int max_key)
 {
-	(*lst_b) = (*lst_b)-> next;
-	ft_printf("rb\n");
-	global_count++;
+	int bits = 0;
+
+	while (max_key > 0)
+	{
+		max_key = max_key >> 1;
+		bits ++;
+	}
+	return (bits);
 }

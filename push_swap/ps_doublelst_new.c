@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:09:19 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 15:32:31 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/09 13:22:45 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_ps_list	*ps_doublelst_new(int content)
 	if (node == NULL)
 		return (NULL);
 	node -> content = content;
+	node -> key = -1;
 	node -> next = NULL;
 	node -> prev = NULL;
 	return (node);

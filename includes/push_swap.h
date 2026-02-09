@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:12:29 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 15:35:31 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/09 15:00:02 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,12 @@
 # include <stdint.h>
 # include <fcntl.h>
 
+extern int global_count;
+
 typedef struct s_ps_list
 {
 	int					content;
+	int					key;
 	struct s_ps_list	*next;
 	struct s_ps_list	*prev;
 }	t_ps_list;
@@ -57,6 +60,9 @@ void		ps_reverse_rrb(t_ps_list **lst_b);
 void		ps_sort(t_ps_list **lst_a, t_ps_list **lst_b);
 int			ps_doublelst_count(t_ps_list **lst);
 void		ps_sort_3digits(t_ps_list **lst_a);
+int			get_max_bits(int	max_key);
+void		ps_input_key(t_ps_list **lst_a);
+void		ps_print_key(t_ps_list **lst);
 int			main(int argc, char **argv);
 
 #endif
