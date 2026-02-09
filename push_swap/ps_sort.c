@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 10:34:54 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/09 14:33:07 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/09 15:05:01 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ void	ps_sort(t_ps_list **lst_a, t_ps_list **lst_b)
 	int	len_a;
 	int	n;
 
+	// add if 1 node
+	// add if two node
+	// add if 3 node
 	if (!lst_a || !(*lst_a))
 		return ;
 	bit = 0;
