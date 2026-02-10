@@ -1,8 +1,18 @@
-_This project has been created as part of the 42 curriculum by mvelasqu_
+*This project has been created as part of the 42 curriculum by mvelasqu*
 
-# Description
+## Description & Overview
 
-**push_swap** is a project designed to enhance your understanding of data structures and algorithmic manipulation. 
+**push_swap** is an algorithmic project that challenges students to sort a list of integers using only two stacks and a limited set of predefined operations.
+
+The objective is not only to sort correctly, but to do so as efficiently as possible, minimizing the number of operations executed.
+
+This project focuses heavily on:
+
+- Data structure manipulation
+- Algorithm optimization
+- Understanding sorting techniques
+- Working with linked lists
+- Efficient problem solving
 
 ## Objective 
 
@@ -22,31 +32,77 @@ The goal is to sort integers in <ins>stack a</ins> in ascending order — with t
 - **rrb (reverse rotate b):** Shift down all elements of stack b by 1. The last element becomes the first one.
 - **rrr :** Perform rra and rrb at the same time.
 
-### Sorting Operation
+### Sorting Strategy
 The sorting approach used in this project is divided based on the number of nodes:
 - **2 nodes**: Uses a simple swap operation
 - **3 nodes**: Uses location-based sorting
 - **4–5 nodes**: Uses division combined with the 3-node sorting logic
 - **6 nodes and above**: Uses a radix sort algorithm
 
-# Instructions
+## How to Use
 
-This project can be executed by following these 3 simple steps:
-1. Run the Makefile to compile the program and create the executable:
+### 1. Compile the Program
+
+Run the Makefile to compile the program and create the executable:
 ```bash
 make
 ```
-2. Run the program with valid parameters:
+### 2. Run the program with valid parameters:
+
 ```bash
 ./push_swap <arguments>
 ```
-- Arguments must be valid positive or negative integers
-- If any argument is not an integer, contains duplicates, or exceeds INT_MAX or INT_MIN, the program will display an error
-3. The output will be a list of operations used to sort the given set of integers.
+### Input Rules
+- Arguments must be valid integers (positive or negative)
+- No duplicate values are allowed
+- Values must be within the range of INT_MIN and INT_MAX
+- Invalid input will result in an Error message
 
-# Resources
+### Output
 
-To better understand this project, it is recommended to study the following topics:
-- Understanding stacks
-- Sorting techniques – particularly radix sort
-- Linked lists (singly, doubly, and circular)
+The program outputs a sequence of operations that will sort the input list.
+
+Example output:
+```bash
+pb
+pb
+pa
+pa
+pa
+```
+
+Each line represents one of the allowed operations applied to the stacks.
+
+### Example Usage
+
+Sorting a small set:
+```bash
+$ ./push_swap 5 1 4 2 3
+```
+
+Sample output:
+```bash
+ra
+pb
+ra
+pb
+rra
+sa
+pa
+pa
+```
+
+You can pipe the output into the official checker program (download at the project page):
+
+```bash
+ARG="5 1 4 2 3"; ./push_swap $ARG | ./checker_linux $ARG
+```
+
+## Resources
+
+To better understand the concepts behind this project:
+
+- Stack data structure fundamentals
+- Sorting algorithms (especially radix sort)
+- Linked lists: singly, doubly, and circular
+- Bitwise operations in C

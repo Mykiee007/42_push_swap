@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:12:29 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 12:31:31 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 13:06:54 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 
 # include "libft.h"
 # include "ft_printf.h"
-# include <limits.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdint.h>
-# include <fcntl.h>
 
 //extern int global_count;
 
