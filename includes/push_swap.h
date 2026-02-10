@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:12:29 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 13:06:54 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:20:54 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_ps_list
 }	t_ps_list;
 
 int			ps_check_ascend(t_ps_list *lst);
+void		ps_error(void);
 int			ps_check_integer_limits(char *str);
 int			ps_check_integer(char **str);
 int			ps_check_min(t_ps_list *lst);

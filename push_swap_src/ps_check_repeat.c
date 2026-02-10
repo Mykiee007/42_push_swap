@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:13:59 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 11:18:06 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:22:53 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ps_check_repeat(t_ps_list *lst)
 		{
 			if (num == index -> next -> content)
 			{
-				ft_printf("Error\n");
+				ps_error();
 				return (0);
 			}
 			index = index -> next;

@@ -6,7 +6,7 @@
 #    By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 11:00:37 by mvelasqu          #+#    #+#              #
-#    Updated: 2026/02/10 11:05:53 by mvelasqu         ###   ########.fr        #
+#    Updated: 2026/02/10 14:21:17 by mvelasqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,7 @@ SRCS_LIB = libft_src/ft_atoi.c \
 		ft_printf/ft_printf_utils2.c
 SRCS_PS = push_swap_src/ps_check_ascending.c \
 		push_swap_src/ps_check_integer.c \
+		push_swap_src/ps_error.c \
 		push_swap_src/ps_check_min.c \
 		push_swap_src/ps_check_repeat.c \
 		push_swap_src/ps_doublelst_add_back.c \

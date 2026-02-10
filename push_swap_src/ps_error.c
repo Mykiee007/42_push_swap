@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_check_integer.c                                 :+:      :+:    :+:   */
+/*   ps_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 14:22:21 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/02/10 14:19:49 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/02/10 14:23:55 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <unistd.h>
 
-int	ps_check_integer(char **str)
+void	ps_error(void)
 {
-	int	i;
-
-	if (!str || !str)
-		return (0);
-	i = 0;
-	while (str[i] != NULL)
-	{
-		if (!ps_check_integer_limits(str[i]))
-		{
-			ps_error();
-			return (0);
-		}
-		i++;
-	}
-	return (1);
+	write(2, "Error\n", 6);
 }
