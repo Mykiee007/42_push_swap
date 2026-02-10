@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 10:34:54 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 12:29:57 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:03:37 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ void	ps_sort(t_ps_list **lst_a, t_ps_list **lst_b)
 	if (!lst_a || !(*lst_a))
 		return ;
 	count = ps_doublelst_count(lst_a);
-	if (count == 1)
+	if (count == 1 || ps_check_ascend(*lst_a))
 		return ;
 	if (count == 2)
 		ps_sort_2digits(lst_a);
 	if (count == 3)
 		ps_sort_3digits(lst_a);
-	if (count >= 4 && count <= 6)
+	if (count >= 4 && count <= 5)
 		ps_sort_4_5digits(lst_a, lst_b);
-	if (count > 6)
+	if (count > 5)
 		ps_sort_radix(lst_a, lst_b);
 }
 
