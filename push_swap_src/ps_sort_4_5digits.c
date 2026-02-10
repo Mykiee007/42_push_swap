@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 09:23:21 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 14:04:36 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:40:39 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ps_sort_4_5digits(t_ps_list **lst_a, t_ps_list **lst_b)
 	count = ps_doublelst_count(lst_a);
 	if (count > 3)
 		ps_min_to_b(lst_a, lst_b, (count - 3));
-
 	if (!ps_check_ascend(*lst_a) && ps_check_ascend(*lst_b))
 	{
 		ps_sort_3digits(lst_a);
