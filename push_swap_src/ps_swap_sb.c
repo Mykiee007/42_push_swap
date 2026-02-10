@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 15:15:25 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 11:59:18 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 12:27:37 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ps_swap_sb(t_ps_list **lst_b)
 	t_ps_list	*third;
 	t_ps_list	*tail;
 
-	if (!lst_b || !(*lst_b))
-		return ;
 	first = (*lst_b);
 	second = (*lst_b)-> next;
 	third = second -> next;
@@ -40,5 +38,4 @@ void	ps_swap_sb(t_ps_list **lst_b)
 		(*lst_b) = second;
 	}
 	ft_printf("sb\n");
-	global_count++;
 }

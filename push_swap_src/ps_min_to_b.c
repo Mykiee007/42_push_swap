@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 09:46:33 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 10:14:51 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 12:28:39 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	ps_min_to_b_rev(t_ps_list **lst_a, t_ps_list **lst_b, int i)
 
 void	ps_min_to_b(t_ps_list **lst_a, t_ps_list **lst_b, int n)
 {
-	int i;
+	int	i;
 
 	while (n > 0)
 	{

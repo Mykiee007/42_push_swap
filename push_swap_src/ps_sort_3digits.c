@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 11:22:36 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 10:14:18 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 12:29:08 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	ps_sort_3digits(t_ps_list **lst_a)
 	int		a_b;
 	int		a_c;
 
-	if (!lst_a || !(*lst_a))
-		return ;
 	a_a = (*lst_a)-> key;
 	a_b = (*lst_a)-> next -> key;
 	a_c = (*lst_a)-> prev -> key;

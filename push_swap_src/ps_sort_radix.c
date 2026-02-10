@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 09:12:48 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 09:43:56 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 12:29:31 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ void	ps_sort_radix(t_ps_list **lst_a, t_ps_list **lst_b)
 	int	len_a;
 	int	n;
 
-	// add if 1 node
-	// add if two node
-	// add if 3 node
 	if (!lst_a || !(*lst_a))
 		return ;
 	bit = 0;
