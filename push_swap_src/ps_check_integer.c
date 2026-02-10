@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_check_repeat.c                                  :+:      :+:    :+:   */
+/*   ps_check_integer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 10:13:59 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 15:36:05 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/02/10 11:18:07 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ps_check_repeat(t_ps_list *lst)
+int	ps_check_integer(char **str)
 {
-	t_ps_list		*cur;
-	t_ps_list		*index;
-	int				num;
+	int	i;
 
-	if (!lst)
+	if (!str || !str)
 		return (0);
-	cur = lst;
-	while (cur -> next != lst)
+	i = 0;
+	while (str[i] != NULL)
 	{
-		num = cur -> content;
-		index = cur;
-		while (index -> next != cur)
+		if (!ps_check_integer_limits(str[i]))
 		{
-			if (num == index -> next -> content)
-				return (0);
-			index = index -> next;
+			ft_printf("Error\n");
+			return (0);
 		}
-		cur = cur -> next;
+		i++;
 	}
 	return (1);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_push_pa.c                                       :+:      :+:    :+:   */
+/*   ps_push_pb.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:12:22 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/09 14:53:06 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 11:59:39 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_push_pa(t_ps_list **lst_dest, t_ps_list **lst_src)
+void	ps_push_pb(t_ps_list **lst_dest, t_ps_list **lst_src)
 {
 	t_ps_list	*first_src;
 	t_ps_list	*second_src;
@@ -37,6 +37,6 @@ void	ps_push_pa(t_ps_list **lst_dest, t_ps_list **lst_src)
 		first_src -> prev = NULL;
 		ps_doublelst_add_front(lst_dest, first_src);
 	}
-	ft_printf("pa\n");
+	ft_printf("pb\n");
 	global_count++;
 }

@@ -6,13 +6,13 @@
 #    By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 11:00:37 by mvelasqu          #+#    #+#              #
-#    Updated: 2026/02/10 10:01:30 by mvelasqu         ###   ########.fr        #
+#    Updated: 2026/02/10 11:05:53 by mvelasqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Defining Variables
 
-NAME = test
+NAME = push_swap
 MAIN = main.c
 #L_ALL = all.a
 #L_LIB = libft.a
@@ -75,42 +75,42 @@ SRCS_LIB = libft_src/ft_atoi.c \
 		ft_printf/ft_printf.c \
 		ft_printf/ft_printf_utils1.c \
 		ft_printf/ft_printf_utils2.c
-SRCS_PS = push_swap/ps_check_ascending.c \
-		push_swap/ps_check_integer.c \
-		push_swap/ps_check_min.c \
-		push_swap/ps_check_repeat.c \
-		push_swap/ps_doublelst_add_back.c \
-		push_swap/ps_doublelst_new.c \
-		push_swap/ps_doublelst_add_front.c \
-		push_swap/ps_free_lst.c \
-		push_swap/ps_index_of_min_reverse.c \
-		push_swap/ps_index_of_min_rotate.c \
-		push_swap/ps_index_of_min.c \
-		push_swap/ps_print_list.c \
-		push_swap/ps_input_to_str.c \
-		push_swap/ft_str_to_lst.c \
-		push_swap/ps_check_integer_limits.c \
-		push_swap/ps_doublelst_clear.c \
-		push_swap/ps_doublelst_delhead.c \
-		push_swap/ps_free_content.c \
-		push_swap/ps_swap_sa.c \
-		push_swap/ps_swap_sb.c \
-		push_swap/ps_push_pa.c \
-		push_swap/ps_push_pb.c \
-		push_swap/ps_rotate_ra.c \
-		push_swap/ps_rotate_rb.c \
-		push_swap/ps_reverse_rra.c \
-		push_swap/ps_reverse_rrb.c \
-		push_swap/ps_sort.c \
-		push_swap/ps_doublelst_count.c \
-		push_swap/ps_sort_3digits.c \
-		push_swap/ps_sort_2digits.c \
-		push_swap/ps_sort_4_5digits.c \
-		push_swap/ps_sort_radix.c \
-		push_swap/ps_min_to_b.c \
-		push_swap/get_max_bits.c \
-		push_swap/ps_input_key.c \
-		push_swap/ps_print_key.c
+SRCS_PS = push_swap_src/ps_check_ascending.c \
+		push_swap_src/ps_check_integer.c \
+		push_swap_src/ps_check_min.c \
+		push_swap_src/ps_check_repeat.c \
+		push_swap_src/ps_doublelst_add_back.c \
+		push_swap_src/ps_doublelst_new.c \
+		push_swap_src/ps_doublelst_add_front.c \
+		push_swap_src/ps_free_lst.c \
+		push_swap_src/ps_index_of_min_reverse.c \
+		push_swap_src/ps_index_of_min_rotate.c \
+		push_swap_src/ps_index_of_min.c \
+		push_swap_src/ps_print_list.c \
+		push_swap_src/ps_input_to_str.c \
+		push_swap_src/ft_str_to_lst.c \
+		push_swap_src/ps_check_integer_limits.c \
+		push_swap_src/ps_doublelst_clear.c \
+		push_swap_src/ps_doublelst_delhead.c \
+		push_swap_src/ps_free_content.c \
+		push_swap_src/ps_swap_sa.c \
+		push_swap_src/ps_swap_sb.c \
+		push_swap_src/ps_push_pa.c \
+		push_swap_src/ps_push_pb.c \
+		push_swap_src/ps_rotate_ra.c \
+		push_swap_src/ps_rotate_rb.c \
+		push_swap_src/ps_reverse_rra.c \
+		push_swap_src/ps_reverse_rrb.c \
+		push_swap_src/ps_sort.c \
+		push_swap_src/ps_doublelst_count.c \
+		push_swap_src/ps_sort_3digits.c \
+		push_swap_src/ps_sort_2digits.c \
+		push_swap_src/ps_sort_4_5digits.c \
+		push_swap_src/ps_sort_radix.c \
+		push_swap_src/ps_min_to_b.c \
+		push_swap_src/get_max_bits.c \
+		push_swap_src/ps_input_key.c \
+		push_swap_src/ps_print_key.c
 OBJS_LIB = $(SRCS_LIB:.c=.o)
 OBJS_PS = $(SRCS_PS:.c=.o)
 OBJS_MAIN = $(MAIN:.c=.o)

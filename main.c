@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:10:45 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/09 15:02:06 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 12:12:59 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,34 @@
 
 int global_count = 0;
 
+int main(int argc, char **argv)
+{
+	t_ps_list *lst_a = NULL;
+	t_ps_list *lst_b = NULL;
+	char	**split;
+	char	*str1;
+
+	if (argc == 1)
+		return (0);
+	str1 = ps_input_to_str(argv);
+	split = ft_split(str1, ' ');
+	free(str1);
+	if (!ps_check_integer(split))
+	{
+		ft_free_split (split);
+		return (0);
+	}
+	ft_str_to_lst(split,&lst_a);
+	ft_free_split(split);
+	ps_input_key(&lst_a);
+	ps_sort(&lst_a, &lst_b);
+	ps_doublelst_clear(&lst_a);
+	ps_doublelst_clear(&lst_b);
+	ft_printf("total moves: %d\n", global_count);
+	return (0);
+}
+
+/* for testing
 int main(int argc, char **argv)
 {
 	t_ps_list *lst_a = NULL;
@@ -67,3 +95,4 @@ int main(int argc, char **argv)
 	ps_doublelst_clear(&lst_b);
 	return 0;
 }
+*/

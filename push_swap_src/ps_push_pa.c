@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_swap_sa.c                                       :+:      :+:    :+:   */
+/*   ps_push_pa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:12:22 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 10:20:19 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 11:59:41 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_swap_sa(t_ps_list **lst_a)
+void	ps_push_pa(t_ps_list **lst_dest, t_ps_list **lst_src)
 {
-	t_ps_list	*first;
-	t_ps_list	*second;
-	t_ps_list	*third;
-	t_ps_list	*tail;
+	t_ps_list	*first_src;
+	t_ps_list	*second_src;
+	t_ps_list	*last_src;
 
-	if (!lst_a || !(*lst_a))
+	if (!lst_src || !*lst_src)
 		return ;
-	first = (*lst_a);
-	second = (*lst_a)-> next;
-	third = second -> next;
-	tail = (*lst_a)-> prev;
-	if (first -> next == first)
-		return ;
-	else if ((*lst_a) == second -> next)
-		(*lst_a) = second;
+	first_src = (*lst_src);
+	if ((*lst_src)-> next == (*lst_src))
+	{
+		ps_doublelst_add_front(lst_dest, first_src);
+		(*lst_src) = NULL;
+	}
 	else
 	{
-		tail -> next = second;
-		second -> prev = tail;
-		second -> next = first;
-		first -> prev = second;
-		first -> next = third;
-		third -> prev = first;
-		(*lst_a) = second;
+		second_src = (*lst_src)-> next;
+		last_src = (*lst_src)-> prev;
+		second_src -> prev = last_src;
+		last_src -> next = second_src;
+		(*lst_src) = second_src;
+		first_src -> next = NULL;
+		first_src -> prev = NULL;
+		ps_doublelst_add_front(lst_dest, first_src);
 	}
-	ft_printf("sa\n");
+	ft_printf("pa\n");
 	global_count++;
 }

@@ -1,42 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_check_integer_limits.c                          :+:      :+:    :+:   */
+/*   ft_str_to_lst.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/03 12:12:11 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 14:48:25 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/02/03 10:31:25 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/02/10 10:58:09 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ps_check_integer_limits(char *str)
+void	ft_str_to_lst(char **split, t_ps_list **lst)
 {
-	long long int	tmp;
+	long long int	number;
+	t_ps_list		*node;
 	int				i;
-	int				sign;
 
 	i = 0;
-	sign = 1;
-	while (str[i] == ' ' || (str[i] > 8 && str[i] < 14))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while (split[i] != NULL)
 	{
-		if (str[i] == '-')
-			sign = -1;
+		number = ft_atoi(split[i]);
+		node = ps_doublelst_new(number);
+		if (!node)
+		{
+			ps_doublelst_clear(lst);
+			return ;
+		}
+		ps_doublelst_add_back(lst, node);
 		i++;
 	}
-	tmp = 0;
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		tmp = (tmp * 10) + (str[i] - '0');
-		if (INT_MIN > (tmp * sign) || (tmp * sign) > INT_MAX)
-			return (0);
-		i++;
-	}
-	if (str[i] != '\0')
-		return (0);
-	return (1);
+	if (!ps_check_repeat(*lst))
+		ps_doublelst_clear(lst);
 }

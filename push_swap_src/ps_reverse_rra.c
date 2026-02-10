@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_check_integer.c                                 :+:      :+:    :+:   */
+/*   ps_reverse_rra.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 14:43:55 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/02/06 11:45:20 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/02/10 11:59:36 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ps_check_integer(char **str)
+void	ps_reverse_rra(t_ps_list **lst_a)
 {
-	int	i;
-
-	if (!str || !str)
-		return (0);
-	i = 0;
-	while (str[i] != NULL)
-	{
-		if (!ps_check_integer_limits(str[i]))
-			return (0);
-		i++;
-	}
-	return (1);
+	(*lst_a) = (*lst_a)-> prev;
+	ft_printf("rra\n");
+	global_count++;
 }
