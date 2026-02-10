@@ -2,11 +2,11 @@ _This project has been created as part of the 42 curriculum by mvelasqu_
 
 # Description
 
-push_swap is project aiming to improve your rigor, logic, algorithm forming, and aim for efficency in coding. 
+**push_swap** is a project designed to enhance your understanding of data structures and algorithmic manipulation. 
 
 ## Objective 
 
-To sort integers in <ins>**stack a**</ins> in ascending order from top being the least and using operations available.
+The goal is to sort integers in <ins>stack a</ins> in ascending order — with the smallest value at the top — using only the allowed operations.
 
 ### Available Operations
 
@@ -20,13 +20,33 @@ To sort integers in <ins>**stack a**</ins> in ascending order from top being the
 - **rr :** ra and rb at the same time.
 - **rra (reverse rotate a):** Shift down all elements of stack a by 1. The last element becomes the first one.
 - **rrb (reverse rotate b):** Shift down all elements of stack b by 1. The last element becomes the first one.
-- **rrr :** rra and rrb at the same time.
+- **rrr :** Perform rra and rrb at the same time.
+
+### Sorting Operation
+The sorting approach used in this project is divided based on the number of nodes:
+- **2 nodes**: Uses a simple swap operation
+- **3 nodes**: Uses location-based sorting
+- **4–5 nodes**: Uses division combined with the 3-node sorting logic
+- **6 nodes and above**: Uses a radix sort algorithm
 
 # Instructions
 
-This project shall be executive by 1st comiling the make file. 
+This project can be executed by following these 3 simple steps:
+1. Run the Makefile to compile the program and create the executable:
+```bash
+make
+```
+2. Run the program with valid parameters:
+```bash
+./push_swap <arguments>
+```
+- Arguments must be valid positive or negative integers
+- If any argument is not an integer, contains duplicates, or exceeds INT_MAX or INT_MIN, the program will display an error
+3. The output will be a list of operations used to sort the given set of integers.
 
 # Resources
 
-- Understanding stack
-- Understanding sort tchniques
+To better understand this project, it is recommended to study the following topics:
+- Understanding stacks
+- Sorting techniques – particularly radix sort
+- Linked lists (singly, doubly, and circular)
