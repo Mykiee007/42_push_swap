@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:10:45 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 14:40:38 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 15:24:48 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ int	main(int argc, char **argv)
 	str1 = ps_input_to_str(argv);
 	split = ft_split(str1, ' ');
 	free(str1);
-	if (!ps_check_integer(split))
+	if (!ps_check_integer(split) || !split || !split[0])
 	{
+		ps_error();
 		ft_free_split(split);
 		return (0);
 	}
