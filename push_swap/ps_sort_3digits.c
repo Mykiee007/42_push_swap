@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 11:22:36 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 15:50:40 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 10:14:18 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,23 @@ void	ps_sort_3digits(t_ps_list **lst_a)
 
 	if (!lst_a || !(*lst_a))
 		return ;
-	a_a = (*lst_a)-> content;
-	a_b = (*lst_a)-> next -> content;
-	a_c = (*lst_a)-> prev -> content;
+	a_a = (*lst_a)-> key;
+	a_b = (*lst_a)-> next -> key;
+	a_c = (*lst_a)-> prev -> key;
 	if ((a_a > a_b) && (a_b > a_c))
 	{
 		ps_swap_sa(lst_a);
-		ps_rotate_ra(lst_a);
+		ps_reverse_rra(lst_a);
 	}
 	else if ((a_a > a_c) && (a_c > a_b))
-		ps_reverse_rra(lst_a);
-	else if ((a_a > a_c) && (a_b > a_a))
 		ps_rotate_ra(lst_a);
+	else if ((a_a > a_c) && (a_b > a_a))
+		ps_reverse_rra(lst_a);
 	else if ((a_a > a_b) && (a_a < a_c))
 		ps_swap_sa(lst_a);
 	else if ((a_a < a_c) && (a_b > a_c))
 	{
-		ps_rotate_ra(lst_a);
+		ps_reverse_rra(lst_a);
 		ps_swap_sa(lst_a);
 	}
 	return ;

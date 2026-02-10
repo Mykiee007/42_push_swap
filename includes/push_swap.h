@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 10:12:29 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/09 15:00:02 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 10:01:06 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,13 @@ void		ps_rotate_ra(t_ps_list **lst_a);
 void		ps_rotate_rb(t_ps_list **lst_b);
 void		ps_reverse_rra(t_ps_list **lst_a);
 void		ps_reverse_rrb(t_ps_list **lst_b);
-void		ps_sort(t_ps_list **lst_a, t_ps_list **lst_b);
 int			ps_doublelst_count(t_ps_list **lst);
+void		ps_sort(t_ps_list **lst_a, t_ps_list **lst_b);
+void		ps_sort_radix(t_ps_list **lst_a, t_ps_list **lst_b);
 void		ps_sort_3digits(t_ps_list **lst_a);
+void		ps_sort_2digits(t_ps_list **lst_a);
+void		ps_sort_4_5digits(t_ps_list **lst_a, t_ps_list **lst_b);
+void		ps_min_to_b(t_ps_list **lst_a, t_ps_list **lst_b, int n);
 int			get_max_bits(int	max_key);
 void		ps_input_key(t_ps_list **lst_a);
 void		ps_print_key(t_ps_list **lst);

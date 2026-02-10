@@ -6,7 +6,7 @@
 #    By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 11:00:37 by mvelasqu          #+#    #+#              #
-#    Updated: 2026/02/09 14:16:52 by mvelasqu         ###   ########.fr        #
+#    Updated: 2026/02/10 10:01:30 by mvelasqu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,6 +104,10 @@ SRCS_PS = push_swap/ps_check_ascending.c \
 		push_swap/ps_sort.c \
 		push_swap/ps_doublelst_count.c \
 		push_swap/ps_sort_3digits.c \
+		push_swap/ps_sort_2digits.c \
+		push_swap/ps_sort_4_5digits.c \
+		push_swap/ps_sort_radix.c \
+		push_swap/ps_min_to_b.c \
 		push_swap/get_max_bits.c \
 		push_swap/ps_input_key.c \
 		push_swap/ps_print_key.c

@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:12:22 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/06 15:32:31 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 10:20:19 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,5 @@ void	ps_swap_sa(t_ps_list **lst_a)
 		(*lst_a) = second;
 	}
 	ft_printf("sa\n");
+	global_count++;
 }

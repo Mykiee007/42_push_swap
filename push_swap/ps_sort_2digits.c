@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_reverse_rra.c                                   :+:      :+:    :+:   */
+/*   ps_sort_2digits.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 11:45:20 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 10:18:23 by mvelasqu         ###   ########.fr       */
+/*   Created: 2026/02/10 09:17:05 by mvelasqu          #+#    #+#             */
+/*   Updated: 2026/02/10 09:21:44 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_reverse_rra(t_ps_list **lst_a)
+void	ps_sort_2digits(t_ps_list **lst_a)
 {
-	(*lst_a) = (*lst_a)-> prev;
-	ft_printf("rra\n");
-	global_count++;
+	if (ps_check_ascend(*lst_a))
+		return;
+	else 
+		ps_rotate_ra (lst_a);
 }

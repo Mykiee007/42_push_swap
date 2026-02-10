@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 10:34:54 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/09 15:05:01 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/10 09:41:40 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,34 +19,21 @@
 
 void	ps_sort(t_ps_list **lst_a, t_ps_list **lst_b)
 {
-	int	bit;
-	int	max_bit;
-	int	len_a;
-	int	n;
+	int	count;
 
-	// add if 1 node
-	// add if two node
-	// add if 3 node
 	if (!lst_a || !(*lst_a))
 		return ;
-	bit = 0;
-	len_a = ps_doublelst_count(lst_a);
-	max_bit = get_max_bits((len_a -1));
-	while (bit < max_bit)
-	{
-		n = len_a;
-		while (n)
-		{
-			if (((*lst_a)-> key >> bit) & 1)
-				ps_rotate_ra(lst_a);
-			else
-				ps_push_pb(lst_b, lst_a);
-			n--;
-		}
-		while (*lst_b != NULL)
-			ps_push_pa(lst_a, lst_b);
-		bit++;
-	}
+	count = ps_doublelst_count(lst_a);
+	if (count == 1)
+		return;
+	if (count == 2)
+		ps_sort_2digits(lst_a);
+	if (count == 3)
+		ps_sort_3digits(lst_a);
+	if (count >= 4 && count <= 6)
+		ps_sort_4_5digits(lst_a, lst_b);
+	if (count > 6)
+		ps_sort_radix(lst_a, lst_b);
 }
 
 /*
