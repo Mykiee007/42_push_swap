@@ -6,7 +6,7 @@
 /*   By: mvelasqu <mvelasqu@student.42singapore.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:50:51 by mvelasqu          #+#    #+#             */
-/*   Updated: 2026/02/10 14:22:21 by mvelasqu         ###   ########.fr       */
+/*   Updated: 2026/02/11 15:58:44 by mvelasqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	ps_check_integer(char **str)
 	{
 		if (!ps_check_integer_limits(str[i]))
 		{
-			ps_error();
 			return (0);
 		}
 		i++;
